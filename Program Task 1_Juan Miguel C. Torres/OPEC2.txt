@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            max-width: 10%;
+            max-height: 10%;
+            vertical-align: middle;
+        }
+        .header {
+            background-color: maroon;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        .header-text {
+            flex-grow: 1;
+            text-align: center;
+        }
+        .footer {
+            background-color: maroon;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .content {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            border: 3px solid maroon;
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-between; 
+            padding: 1rem;
+        }
+        .content_classboxClassif {
+            width: 32%; 
+            padding: 1rem;
+        }
+		.content_classboxInputs {
+		}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="UBlogo.png" alt="Logo">
+        <div class="header-text">
+            <h3>University of Batangas Lipa Campus Library</h3>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content_classboxClassif">
+            <p>Teacher</p>
+            <form>
+                <input type="radio" name="classification" value="teacher">
+            </form>
+        </div>
+
+        <div class="content_classboxClassif">
+            <p>Student</p>
+            <form>
+                <input type="radio" name="classification" value="student">
+            </form>
+        </div>
+
+        <div class="content_classboxInputs">
+            <form>
+                <label for="IDNumber">ID Number:</label><br>
+                <input type="text" id="IDNumber" name="idnumber" value="2120850">
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>University of Batangas Lipa Campus Library</p>
+    </div>
+</body>
+</html>
