@@ -1,24 +1,57 @@
 <!DOCTYPE html>
+<html>
+<title>University of Batangas Public Library</title>
+
 <head>
 
-    <title>University of Batangas Public Library</title>
-    
     <style>
-        html {
+        html, body {
             height: 100%;
             margin: 0;
             padding: 0;
         }
-        body {
-            background-image: linear-gradient(to right top,maroon,yellow);
+        .toplinecolor {
+            background-color: maroon;
+            width: 100%;
+            height: 5px; 
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+        .toplogoimage{
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: auto;
+            height: 8%; 
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .container {
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100%;
+            background-color: white; 
+            position: relative;
+        }
+        .background-image {
+            position: absolute;
+            top: 10%;
+            left: 0;
+            width: 100%;
+            height: 90%;
+            background-image: url("UBPic.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         .formbox {
+            z-index: 1;
             border-radius: 25px;
-            background-color: white;
-            margin-top:15%;
+            background-color: white; 
+            margin-top: 10%;
             height: 400px;
             width: 500px;
         }
@@ -52,16 +85,30 @@
 
 <body>
 
-    <div class="formbox">
+    <div class="toplinecolor">
+    </div>
 
-        <div class="formheader">
-            
-            <div class="formheader-icon">
-                <img src="UBlogo.png">
-            </div>
+    <div class="container">
 
-            <div class="formheader-text">
-                <p><h2>Library Card Registration</h2></p>
+        <div class="toplogoimage">
+            <img src="UB-Master-Logo.png">
+        </div>
+
+        <div class="background-image">
+        </div>
+
+        <div class="formbox">
+
+            <div class="formheader">
+
+                <div class="formheader-icon">
+                    <img src="UBlogo.png">
+                </div>
+
+                <div class="formheader-text">
+                    <p><h2>Library Card Registration</h2></p>
+                </div>
+
             </div>
 
         </div>
@@ -69,5 +116,4 @@
     </div>
 
 </body>
-
 </html>
