@@ -79,6 +79,64 @@
             height: 100%;
             vertical-align: middle;
         }
+        .formcontent {
+            background-color: whitesmoke;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+        }
+        .formcontent-details {
+            height: 100%;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; 
+        }
+        .formcontent-details form {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+        }
+        .formcontent-details form input[type="submit"] {
+            background-color: white;
+        }
+        .formcontent-picture {
+            height: 100%;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .add-profile-pic {
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 5px; 
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .file-input {
+            display: none;
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-size: 24px;
+        }
+        img#profile-pic {
+            border-radius: 50%;
+        }
+
     </style>
 
 </head>
@@ -109,6 +167,41 @@
                     <p><h2>Library Card Registration</h2></p>
                 </div>
 
+            </div>
+            
+            <div class="formcontent">
+
+                <div class="formcontent-picture">
+
+                    <div class="avatar">
+                        <img id="profile-pic"  src="Placeholder-Avatar.jpg">
+                    </div>
+
+                    <br>
+
+                    <label class="add-profile-pic" for="profile-pic-input">
+                        <span class="file-label">Add Profile Pic</span>
+                    </label>
+                    <input type="file" id="profile-pic-input" class="file-input" accept="image/*">
+                
+                </div>
+
+                <div class="formcontent-details">
+
+                    <form>
+                        <label for="fname">First name:</label>
+                        <input type="text" id="fname" name="fname" placeholder="Mika" required><br>
+                        <label for="lname">Last name:</label>
+                        <input type="text" id="lname" name="lname" placeholder="Melatika" required><br>
+                        <label for="email">Email Address:</label>
+                        <input type="text" id="email" name="email" placeholder="emailaddress@gmail.com" required><br>
+                        <label for="dateofbirth">Date of Birth:</label>
+                        <input type="date" id="dateofbirth" name="dateofbirth"><br><br>
+                        <input type="submit" value="Submit">
+                      </form> 
+
+                </div>
+                
             </div>
 
         </div>
