@@ -1,0 +1,244 @@
+    <!DOCTYPE html>
+    <html>
+    <title>University of Batangas Public Library</title>
+
+    <head>
+
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            .toplinecolor {
+                background-color: maroon;
+                width: 100%;
+                height: 5px; 
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+            }
+            .toplogoimage{
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: auto;
+                height: 8%; 
+                position: absolute;
+                top: 10px;
+                left: 10px;
+            }
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 120%;
+                background-color: white; 
+                position: relative;
+            }
+            .background-image {
+                position: absolute;
+                top: 10%;
+                left: 0;
+                width: 100%;
+                height: 90%;
+                background-image: url("UBPic.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .formbox {
+                z-index: 1;
+                border-radius: 25px;
+                background-color: white; 
+                margin-top: 10%;
+                height: 400px;
+                width: 500px;
+            }
+            .formheader {
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+                background-color: rgba(128, 0, 0, 0.8);
+                height: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .formheader-text {
+                color: white;
+                text-align: center;
+                padding-right: 10%;
+                flex-grow: 1;
+            }
+            .formheader-icon {
+                max-width: 10%;
+                padding-left: 3%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                vertical-align: middle;
+            }
+            .formcontent {
+                background-color: whitesmoke;
+                height: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+            }
+            .formcontent-details {
+                height: 100%;
+                flex-grow: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column; 
+            }
+            .formcontent-details form {
+                display: flex;
+                flex-direction: column;
+                align-items: left;
+            }
+            .formcontent-details form input[type="submit"] {
+                background-color: white;
+            }
+            .formcontent-picture {
+                height: 100%;
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .add-profile-pic {
+                background-color: white;
+                border: 2px solid black;
+                border-radius: 5px; 
+                padding: 20px;
+                text-align: center;
+                cursor: pointer;
+            }
+            .file-input {
+                display: none;
+            }
+            .avatar {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: black;
+                font-size: 24px;
+            }
+            img#profile-pic {
+                border-radius: 50%;
+            }
+            .footer {
+                height: 10%;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .footer-text {
+                text-align: center;
+                padding-right: 5%;
+                flex-grow: 1;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="toplinecolor">
+        </div>
+
+        <div class="container">
+
+            <div class="toplogoimage">
+                <img src="UB-Master-Logo.png">
+            </div>
+
+            <div class="background-image">
+            </div>
+
+            <div class="formbox">
+
+                <div class="formheader">
+
+                    <div class="formheader-icon">
+                        <img src="UBlogo.png">
+                    </div>
+
+                    <div class="formheader-text">
+                        <p><h2>Public Library Card Registration</h2></p>
+                    </div>
+
+                </div>
+                
+                <div class="formcontent">
+
+                    <div class="formcontent-picture">
+
+                        <div class="avatar">
+                            <img id="profile-pic"  src="Placeholder-Avatar.jpg">
+                        </div>
+
+                        <br>
+
+                        <label class="add-profile-pic" for="profile-pic-input">
+                            <span class="file-label">Add Profile Picture</span>
+                        </label>
+                        <input type="file" id="profile-pic-input" class="file-input" accept="image/*">
+                    
+                    </div>
+
+                    <div class="formcontent-details">
+
+                        <form>
+                            <label for="fname">First name:</label>
+                            <input type="text" id="fname" name="fname" placeholder="Enna" required><br>
+                            <label for="lname">Last name:</label>
+                            <input type="text" id="lname" name="lname" placeholder="Alouette" required><br>
+                            <label for="email">Email Address:</label>
+                            <input type="text" id="email" name="email" placeholder="emailaddress@gmail.com" required><br>
+                            <label for="dateofbirth">Date of Birth:</label>
+                            <input type="date" id="dateofbirth" name="dateofbirth"><br><br>
+                            <input type="submit" value="Submit">
+                        </form> 
+
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer">
+
+            <div class="footer-text">
+                Home
+            </div>
+
+            <div class="footer-text">
+                About Us
+            </div>
+
+            <div class="footer-text">
+                Contacts
+            </div>
+
+            <div class="footer-text">
+                Private Policy
+            </div>
+
+        </div>
+
+    </body>
+    </html>
