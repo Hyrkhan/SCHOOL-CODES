@@ -19,6 +19,11 @@
                 left: 0;
                 z-index: 2;
             }
+            .header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
             .toplogoimage{
                 background-size: contain;
                 background-repeat: no-repeat;
@@ -27,6 +32,27 @@
                 position: absolute;
                 top: 10px;
                 left: 10px;
+                padding-right: 10%;
+                flex-grow: 1;
+            }
+            .header-navigation {
+                height: 8%;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                padding-right: 5%;
+                flex-grow: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .header-navigation-buttons {
+                height: 100%;
+                top: 10px;
+                padding-left: 25%;
+            }
+            h2#navigation-button {
+                font-weight: normal;
             }
             .container {
                 display: flex;
@@ -36,17 +62,6 @@
                 background-color: white; 
                 position: relative;
             }
-            .background-image {
-                position: absolute;
-                top: 10%;
-                left: 0;
-                width: 100%;
-                height: 90%;
-                background-image: url("UBPic.jpg");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }	
             img {
                 width: 100%;
                 height: 100%;
@@ -76,14 +91,22 @@
 
         <div class="container">
 
-            <div class="toplogoimage">
-                <img src="UB-Master-Logo.png">
-            </div>
+            <div class="header">
 
-            <div class="background-image">
-            </div>
+                <div class="toplogoimage">
+                    <img src="UB-Master-Logo.png">
+                </div>
 
-            <div class="formbox">
+                <div class="header-navigation">
+                    <div class="header-navigation-buttons">
+                        <h2 id="navigation-button">Login</h2>
+                    </div>
+                    <div class="header-navigation-buttons">
+                        <h2 id="navigation-button">Register</h2>
+                    </div>
+                </div>
+
+                
 
             </div>
 
