@@ -49,10 +49,24 @@
             .header-navigation-buttons {
                 height: 100%;
                 top: 10px;
-                padding-left: 25%;
+                padding-left: 15%;
             }
             h2#navigation-button {
-                font-weight: normal;
+                font-weight: 100;
+            }
+            .button {
+                background-color: maroon;
+                border: none;
+                color: white;
+                padding: 5px 15px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                cursor: pointer;
+                border-radius: 16px;
+            }
+            .button:hover {
+                background-color: #b93939;
             }
             .container {
                 display: flex;
@@ -125,6 +139,7 @@
                 padding-right: 5%;
                 flex-grow: 1;
             }
+            
 
         </style>
 
@@ -150,7 +165,9 @@
                     </div>
 
                     <div class="header-navigation-buttons">
-                        <h2 id="navigation-button">Register</h2>
+                        <button class="button">
+                            <h2 id="navigation-button">Register</h2>
+                        </button>
                     </div>
 
                 </div>
