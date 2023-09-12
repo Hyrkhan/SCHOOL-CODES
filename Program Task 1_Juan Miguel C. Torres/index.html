@@ -78,11 +78,34 @@
             }
             .contentbox {
                 position: absolute;
-                top: 10%;
+                top: 11%;
                 left: 0;
                 width: 100%;
                 height: 90%;
                 background-color: whitesmoke;
+            }
+            .pathbox {  
+                height: 7%;
+            }
+            ul.breadcrumb {
+                list-style: none;
+            }
+            ul.breadcrumb li {
+                display: inline;
+                font-size: 18px;
+            }
+            ul.breadcrumb li+li:before {
+                padding: 8px;
+                color: black;
+                content: "/\00a0";
+            }
+            ul.breadcrumb li a {
+                color: maroon;
+                text-decoration: none;
+            }
+            ul.breadcrumb li a:hover {
+                color: #b93939;
+                text-decoration: underline;
             }
             .contentbox-top {
                 height: 25%;
@@ -175,6 +198,13 @@
             </div>
 
             <div class="contentbox">
+
+                <div class="pathbox">
+                    <ul class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li>Search Catalog</li>
+                      </ul>
+                </div>
 
                 <div class="contentbox-top">
                     <p>
