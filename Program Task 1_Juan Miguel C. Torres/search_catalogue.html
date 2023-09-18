@@ -1,0 +1,259 @@
+    <!DOCTYPE html>
+    <html>
+    <title>University of Batangas Public Library</title>
+
+    <head>
+
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            .toplinecolor {
+                background-color: maroon;
+                width: 100%;
+                height: 5px; 
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+            }
+            .header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .toplogoimage{
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: auto;
+                height: 8%; 
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                padding-right: 10%;
+                flex-grow: 1;
+            }
+            .header-navigation {
+                height: 8%;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                padding-right: 5%;
+                flex-grow: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .header-navigation-buttons {
+                height: 100%;
+                top: 10px;
+                padding-left: 15%;
+            }
+            h2#navigation-button {
+                font-weight: 100;
+            }
+            .button {
+                background-color: maroon;
+                border: none;
+                color: white;
+                padding: 5px 15px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                cursor: pointer;
+                border-radius: 16px;
+            }
+            .button:hover {
+                background-color: #b93939;
+            }
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 120%;
+                background-color: white; 
+                position: relative;
+            }
+            .contentbox {
+                position: absolute;
+                top: 11%;
+                left: 0;
+                width: 100%;
+                height: 90%;
+                background-color: whitesmoke;
+            }
+            .pathbox {  
+                height: 7%;
+            }
+            ul.breadcrumb {
+                list-style: none;
+            }
+            ul.breadcrumb li {
+                display: inline;
+                font-size: 18px;
+            }
+            ul.breadcrumb li+li:before {
+                padding: 8px;
+                color: black;
+                content: "/\00a0";
+            }
+            ul.breadcrumb li a {
+                color: maroon;
+                text-decoration: none;
+            }
+            ul.breadcrumb li a:hover {
+                color: #b93939;
+                text-decoration: underline;
+            }
+            .contentbox-top {
+                height: 25%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .contentbox-middle {
+                height: 75%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            h2#content-text {
+                color: maroon;
+            }
+            .contentbox-middle-searchcatalog {
+                height: 100%;
+                flex-grow: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column; 
+                margin-bottom: 10%;
+            }
+            .contentbox-middle-searchcatalog form {
+                display: flex;
+                flex-direction: column;
+                align-items: left;
+            }
+            .contentbox-middle-searchcatalog form input[type="submit"] {
+                background-color: maroon;
+                color: white;
+            }
+            h3#motto {
+                font-weight: normal;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                vertical-align: middle;
+            }
+            .footer {
+                height: 10%;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .footer-text {
+                text-align: center;
+                padding-right: 5%;
+                flex-grow: 1;
+            }
+            
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="toplinecolor">
+        </div>
+
+        <div class="container">
+
+            <div class="header">
+
+                <div class="toplogoimage">
+                    <img src="UB-Master-Logo.png">
+                </div>
+
+                <div class="header-navigation">
+
+                    <div class="header-navigation-buttons">
+                        <h2 id="navigation-button">Login</h2>
+                    </div>
+
+                    <div class="header-navigation-buttons">
+                        <button class="button">
+                            <h2 id="navigation-button">Register</h2>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="contentbox">
+
+                <div class="pathbox">
+                    <ul class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li>Search Catalog</li>
+                      </ul>
+                </div>
+
+                <div class="contentbox-top">
+                    <p>
+                        <h1>Welcome to UB Lipa Campus OPAC!</h1>
+                        <h3 id="motto">Discover a world of academic resources at your fingertips. 
+                        Start your search now!</h3>
+                    </p>
+                </div>
+
+                <div class="contentbox-middle">
+                    <h2 id="content-text">Search the Catalog:</h2>
+                    <div class="contentbox-middle-searchcatalog">
+                        <form >
+                            <label for="title">Title:</label>
+                            <input type="text" id="title" name="title"><br>
+                            <label for="author">Author:</label>
+                            <input type="text" id="author" name="author"><br>
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" name="subject"><br>
+                            <label for="series-title">Series Title:</label>
+                            <input type="text" id="series-title" name="series-title"><br>
+                            <input type="submit" value="Submit">
+                        </form> 
+                    </div>
+                </div>
+                
+            </div>                                       
+
+        </div>
+
+        <div class="footer">
+
+            <div class="footer-text">
+                Search Catalog
+            </div>
+
+            <div class="footer-text">
+                Library Information
+            </div>
+
+            <div class="footer-text">
+                Contacts Us
+            </div>
+
+            <div class="footer-text">
+                Private Policy
+            </div>
+
+        </div>
+
+    </body>
+    </html>
