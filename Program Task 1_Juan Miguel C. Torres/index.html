@@ -116,7 +116,7 @@
             align-items: left;
             padding-left: 3%;
             padding-right: 3%;
-            /* background-color: pink; */
+            /*background-color: pink;*/
             
         }
         h3#paragraph {
@@ -128,25 +128,36 @@
             justify-content: left;
             align-items: center;
             flex-direction: row;
-            /* background-color: skyblue; */
+            /*background-color: skyblue;*/
         }
-        .contentbox-middle-nav {
+        .contentbox-middle ul.contentbox-middle-list {
+            list-style: none;
+            padding-left: 3%;
+            padding-right: 3%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        .contentbox-middle ul.contentbox-middle-list li {
+            flex: 1;
+            text-align: center;
+            background-color: grey;
             margin: 1%;
-            height: 85%;
-            width: 30%;
             padding: 2%;
             display: flex;
             justify-content: center;
-            /* background-color: yellow; */
-            background-color: grey;
+            height: 70%;
+            border-radius: 8px;
         }
-        .contentbox-middle-nav#UBwebsite {
+        .contentbox-middle ul.contentbox-middle-list li#UBwebsite {
             background-image: url("UBlogo.png");
             background-position: center;
             background-repeat: no-repeat;
             background-size: 90% 60%;
         }
-        .contentbox-middle-nav#eBrahman {
+        .contentbox-middle ul.contentbox-middle-list li#eBrahman {
             background-image: url("BrahmanLogo.jpg");
             background-position: center;
             background-repeat: no-repeat;
@@ -160,7 +171,7 @@
             justify-content: left;
             align-items: center;
             flex-direction: column;
-            /* background-color: pink; */
+            /*background-color: pink;*/
         }
         img {
             width: 100%;
@@ -243,29 +254,38 @@
             </div>
 
             <div class="contentbox-middle">
-                <div class="contentbox-middle-nav">
-                    <a href="Resources.html">
-                        Resources
-                    </a>
-                    
-                </div>
-                <div class="contentbox-middle-nav" id="UBwebsite">
-                    <a href="https://ub.edu.ph/">
-                        <div>
-                            UB Website
-                        </div>
-                    </a>
-                </div>
-                <div class="contentbox-middle-nav" id="eBrahman">
-                    <a href="https://ubsd.ub.edu.ph/ebrahman/">
-                        eBrahman
-                    </a>
-                </div>
-                <div class="contentbox-middle-nav">
-                    About Us
-                </div>
-                
+                <ul class="contentbox-middle-list">
+                    <li class="contentbox-middle-nav">
+                        <a href="Resources.html">
+                            <div class="contentbox-middle-nav-title">
+                                Resources
+                            </div>
+                        </a>
+                    </li>
+                    <li class="contentbox-middle-nav" id="UBwebsite">
+                        <a href="https://ub.edu.ph/">
+                            <div class="contentbox-middle-nav-title">
+                                UB Website
+                            </div>
+                        </a>
+                    </li>
+                    <li class="contentbox-middle-nav" id="eBrahman">
+                        <a href="https://ubsd.ub.edu.ph/ebrahman/">
+                            <div class="contentbox-middle-nav-title">
+                                eBrahman
+                            </div>
+                        </a>
+                    </li>
+                    <li class="contentbox-middle-nav">
+                        <a href="#">
+                            <div class="contentbox-middle-nav-title">
+                                About Us
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
+
 
             <div class="contentbox-bottom">
                 <p>
