@@ -128,15 +128,65 @@
             justify-content: left;
             align-items: center;
             flex-direction: row;
+            /*background-color: skyblue;*/
         }
-        .contentbox-middle-nav {
+        .contentbox-middle ul.contentbox-middle-list {
+            list-style: none;
+            padding-left: 2%;
+            padding-right: 2%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        .list-button {
+            flex: 1;
+            text-align: center;
             margin: 1%;
-            height: 85%;
-            width: 30%;
-            padding: 2%;
             display: flex;
             justify-content: center;
-            background-color: grey;
+            height: 80%;
+            border-radius: 8px;
+            background-color: maroon;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .list-button:hover {
+            background-color: #b93939;
+        }
+        .contentbox-middle ul.contentbox-middle-list li {
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .contentbox-middle ul.contentbox-middle-list li#Math {
+            background-image: url("");
+            background-size: 105% 70%;
+        }
+        .contentbox-middle ul.contentbox-middle-list li#Engineering {
+            background-image: url("");
+            background-size: 90% 60%;
+        }
+        .contentbox-middle ul.contentbox-middle-list li#Computer {
+            background-image: url("");
+            background-size: 90% 60%;
+        }
+        .contentbox-middle ul.contentbox-middle-list li#Finance {
+            background-image: url("");
+            background-size: 95% 65%;
+        }
+        .contentbox-middle ul.contentbox-middle-list li#Hospitality {
+            background-image: url("");
+            background-size: 95% 65%;
+        }
+        .contentbox-middle-list-title {
+            margin-top: 7%;
+            color: gold;
+            font-size: 25px;
+        }
+        a#list-link {
+            text-decoration: none;
+            width: 100%;
         }
         .contentbox-bottom {
             height: 25%;
@@ -226,21 +276,44 @@
             </div>
 
             <div class="contentbox-middle">
-                <div class="contentbox-middle-nav">
-                    Maths
-                </div>
-                <div class="contentbox-middle-nav">
-                    Engineering
-                </div>
-                <div class="contentbox-middle-nav">
-                    Computer Programming
-                </div>
-                <div class="contentbox-middle-nav">
-                    Finance & Accounting
-                </div>
-                <div class="contentbox-middle-nav">
-                    Hospitality
-                </div>
+                <ul class="contentbox-middle-list">
+                    <li id="Math" class="list-button">
+                        <a href="#" id="list-link">
+                            <div class="contentbox-middle-list-title">
+                                Maths
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li id="Engineering" class="list-button">
+                        <a href="#" id="list-link">
+                            <div class="contentbox-middle-list-title">
+                                Engineering
+                            </div>
+                        </a>
+                    </li>
+                    <li id="Computer" class="list-button">
+                        <a href="#" id="list-link">
+                            <div class="contentbox-middle-list-title">
+                                Computer Programming
+                            </div>
+                        </a>
+                    </li>
+                    <li id="Finance" class="list-button">
+                        <a href="#" id="list-link">
+                            <div class="contentbox-middle-list-title">
+                                Finance & Accounting
+                            </div>
+                        </a>
+                    </li>
+                    <li id="Hospitality" class="list-button">
+                        <a href="#" id="list-link">
+                            <div class="contentbox-middle-list-title">
+                                Hospitality
+                            </div>
+                        </a>
+                    </li>
+                </ul>
                 
             </div>
 

@@ -125,18 +125,56 @@
         .contentbox-middle {
             height: 50%;
             display: flex;
-            justify-content: center;
+            justify-content: left;
             align-items: center;
             flex-direction: row;
+            /*background-color: skyblue;*/
         }
-        .contentbox-middle-nav {
+        .contentbox-middle ul.contentbox-middle-list {
+            list-style: none;
+            padding-left: 2%;
+            padding-right: 2%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        .list-button {
+            flex: 1;
+            text-align: center;
             margin: 1%;
-            height: 85%;
-            width: 40%;
-            padding: 2%;
             display: flex;
             justify-content: center;
-            background-color: grey;
+            height: 80%;
+            border-radius: 8px;
+            background-color: maroon;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .list-button:hover {
+            background-color: #b93939;
+        }
+        .contentbox-middle ul.contentbox-middle-list li {
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .contentbox-middle ul.contentbox-middle-list li#Senior {
+            background-image: url("");
+            background-size: 105% 70%;
+        }
+        .contentbox-middle ul.contentbox-middle-list li#College {
+            background-image: url("");
+            background-size: 90% 60%;
+        }
+        .contentbox-middle-list-title {
+            margin-top: 7%;
+            color: gold;
+            font-size: 25px;
+        }
+        a#list-link {
+            text-decoration: none;
+            width: 100%;
         }
         .contentbox-bottom {
             height: 25%;
@@ -225,15 +263,23 @@
             </div>
 
             <div class="contentbox-middle">
-                <div class="contentbox-middle-nav">
-                    Senior Highschool Theses
-                </div>
-                <div class="contentbox-middle-nav">
-                    <a href="College/CollegeTheses.html">
-                        College Theses
-                    </a>
+                <ul class="contentbox-middle-list">
+                    <li id="Senior" class="list-button">
+                        <a href="#" id="list-link">
+                            <div class="contentbox-middle-list-title">
+                                Senior Highschool Theses
+                            </div>
+                        </a>
+                    </li>
                     
-                </div>
+                    <li id="College" class="list-button">
+                        <a href="College/CollegeTheses.html" id="list-link">
+                            <div class="contentbox-middle-list-title">
+                                College Theses
+                            </div>
+                        </a>
+                    </li>
+                </ul>
 
             </div>
 
