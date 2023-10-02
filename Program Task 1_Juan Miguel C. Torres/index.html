@@ -132,46 +132,56 @@
         }
         .contentbox-middle ul.contentbox-middle-list {
             list-style: none;
-            padding-left: 3%;
-            padding-right: 3%;
+            padding-left: 2%;
+            padding-right: 2%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: 100%;
             width: 100%;
         }
-        .contentbox-middle ul.contentbox-middle-list li {
+        .list-button {
             flex: 1;
             text-align: center;
-            background-color: maroon;
             margin: 1%;
             padding: 2%;
             display: flex;
             justify-content: center;
             height: 70%;
             border-radius: 8px;
+            background-color: maroon;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .list-button:hover {
+            background-color: #b93939;
+        }
+        .contentbox-middle ul.contentbox-middle-list li {
+            background-position: center;
+            background-repeat: no-repeat;
         }
         .contentbox-middle ul.contentbox-middle-list li#Resources {
             background-image: url("resourcesLogo.png");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 90% 60%;
+            background-size: 105% 70%;
         }
         .contentbox-middle ul.contentbox-middle-list li#UBwebsite {
             background-image: url("UBlogo.png");
-            background-position: center;
-            background-repeat: no-repeat;
             background-size: 90% 60%;
         }
         .contentbox-middle ul.contentbox-middle-list li#eBrahman {
             background-image: url("BrahmanLogo.png");
-            background-position: center;
-            background-repeat: no-repeat;
+            
             background-size: 90% 60%;
+        }
+        .contentbox-middle ul.contentbox-middle-list li#AboutUs {
+            background-image: url("");
         }
         .contentbox-middle-list-title {
             color: gold;
             font-size: 25px;
+        }
+        a#list-link {
+            text-decoration: none;
         }
         .contentbox-bottom {
             height: 25%;
@@ -265,32 +275,32 @@
 
             <div class="contentbox-middle">
                 <ul class="contentbox-middle-list">
-                    <li id="Resources">
-                        <a href="Resources.html">
+                    <li id="Resources" class="list-button">
+                        <a href="Resources.html" id="list-link">
                             <div class="contentbox-middle-list-title">
                                 Resources
                             </div>
                         </a>
                     </li>
                     
-                    <li id="UBwebsite">
-                        <a href="https://ub.edu.ph/">
+                    <li id="UBwebsite" class="list-button">
+                        <a href="https://ub.edu.ph/" id="list-link">
                             <div class="contentbox-middle-list-title">
                                 UB Website
                             </div>
                         </a>
                     </li>
-                    <li id="eBrahman">
-                        <a href="https://ubsd.ub.edu.ph/ebrahman/">
+                    <li id="eBrahman" class="list-button">
+                        <a href="https://ubsd.ub.edu.ph/ebrahman/" id="list-link">
                             <div class="contentbox-middle-list-title">
                                 eBrahman
                             </div>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li id="AboutUs" class="list-button">
+                        <a href="#" id="list-link">
                             <div class="contentbox-middle-list-title">
-                                About Us
+                                Search Catalog
                             </div>
                         </a>
                     </li>
