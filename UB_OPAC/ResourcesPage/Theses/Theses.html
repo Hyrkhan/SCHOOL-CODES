@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<title>University of Batangas Public Library</title>
+
+<head>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .toplinecolor {
+            background-color: maroon;
+            width: 100%;
+            height: 5px; 
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .toplogoimage{
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: auto;
+            height: 8%; 
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding-right: 10%;
+            flex-grow: 1;
+        }
+        .header-navigation {
+            height: 8%;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding-right: 5%;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header-navigation-buttons {
+            height: 100%;
+            top: 10px;
+            padding-left: 15%;
+        }
+        h2#navigation-button {
+            font-weight: 100;
+        }
+        .button {
+            background-color: maroon;
+            border: none;
+            color: white;
+            padding: 5px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 16px;
+        }
+        .button:hover {
+            background-color: #b93939;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120%;
+            background-color: white; 
+            position: relative;
+        }
+        .contentbox {
+            position: absolute;
+            top: 10%;
+            left: 0;
+            width: 100%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+        }
+        .pathbox {  
+            height: 5%;
+            align-items: center;
+            background-color: whitesmoke;
+        }
+        ul.breadcrumb {
+            list-style: none;
+        }
+        ul.breadcrumb li {
+            display: inline;
+            font-size: 18px;
+        }
+        ul.breadcrumb li+li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
+        ul.breadcrumb li a {
+            color: maroon;
+            text-decoration: none;
+        }
+        ul.breadcrumb li a:hover {
+            color: #b93939;
+            text-decoration: underline;
+        }
+        .contentbox-top {
+            flex: 0 0 auto;
+            justify-content: left;
+            align-items: left;
+            padding-left: 3%;
+            padding-right: 3%;
+            
+        }
+        h3#motto {
+            font-weight: normal;
+        }
+        .contentbox-middle {
+            height: 50%;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            flex-direction: row;
+            /*background-color: skyblue;*/
+        }
+        .contentbox-middle ul.contentbox-middle-list {
+            list-style: none;
+            padding-left: 2%;
+            padding-right: 2%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        .list-button {
+            flex: 1;
+            text-align: center;
+            margin: 1%;
+            display: flex;
+            justify-content: center;
+            height: 80%;
+            border-radius: 8px;
+            background-color: maroon;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .list-button:hover {
+            background-color: #b93939;
+        }
+        .contentbox-middle ul.contentbox-middle-list li {
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .contentbox-middle ul.contentbox-middle-list li#Senior {
+            background-image: url("");
+            background-size: 105% 70%;
+        }
+        .contentbox-middle ul.contentbox-middle-list li#College {
+            background-image: url("");
+            background-size: 90% 60%;
+        }
+        .contentbox-middle-list-title {
+            margin-top: 7%;
+            color: gold;
+            font-size: 25px;
+        }
+        a#list-link {
+            text-decoration: none;
+            width: 100%;
+        }
+        .contentbox-bottom {
+            height: 25%;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            flex-direction: column;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+        }
+        .footer {
+            height: 10%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer-text {
+            text-align: center;
+            padding-right: 5%;
+            flex-grow: 1;
+        }
+        
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="toplinecolor">
+    </div>
+
+    <div class="container">
+
+        <div class="header">
+
+            <div class="toplogoimage">
+                <img src="/Program Task 1_Juan Miguel C. Torres/MainPics/UB-Master-Logo.png">
+            </div>
+
+            <div class="header-navigation">
+
+                <div class="header-navigation-buttons">
+                    <h2 id="navigation-button">Login</h2>
+                </div>
+
+                <div class="header-navigation-buttons">
+                    <a href="/Program Task 1_Juan Miguel C. Torres/Registration.html">
+                        <button class="button">
+                            <h2 id="navigation-button">Register</h2>
+                        </button>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="contentbox">
+
+            <div class="pathbox">
+                <ul class="breadcrumb">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../Resources.html">Resources</a></li>
+                    <li>Theses</li>
+                  </ul>
+            </div>
+
+            <div class="contentbox-top">
+                <h2>Theses</h2>
+                <p>
+                    <h3 id="motto">placeholder textplaceholder text<br><br>
+                        placeholder textplaceholder textplaceholder textplaceholder text
+                        placeholder textplaceholder textplaceholder textplaceholder textplaceholder text
+                        placeholder textplaceholder textplaceholder textplaceholder textplaceholder text.<br><br>
+                        placeholder textplaceholder textplaceholder textplaceholder textplaceholder textplaceholder text
+                        placeholder textplaceholder textplaceholder textplaceholder textplaceholder textplaceholder text
+                        placeholder textplaceholder textplaceholder textplaceholder textplaceholder text
+                    </h3>
+                </p>
+                
+            </div>
+
+            <div class="contentbox-middle">
+                <ul class="contentbox-middle-list">
+                    <li id="Senior" class="list-button">
+                        <a href="#" id="list-link">
+                            <div class="contentbox-middle-list-title">
+                                Senior Highschool Theses
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li id="College" class="list-button">
+                        <a href="College/CollegeTheses.html" id="list-link">
+                            <div class="contentbox-middle-list-title">
+                                College Theses
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="contentbox-bottom">
+                
+            </div>
+            
+        </div>                                       
+
+    </div>
+
+    <div class="footer">
+
+        <div class="footer-text">
+            Search Catalog
+        </div>
+
+        <div class="footer-text">
+            Library Information
+        </div>
+
+        <div class="footer-text">
+            Contacts Us
+        </div>
+
+        <div class="footer-text">
+            Private Policy
+        </div>
+
+    </div>
+
+</body>
+</html>
