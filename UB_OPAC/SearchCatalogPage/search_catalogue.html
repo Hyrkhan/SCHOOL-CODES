@@ -118,9 +118,21 @@
             margin-right: .25%;
         }
         .left-side {
-            background-color: teal;
+            background-color: darkgrey;
             height: 100%;
             width: 20%;
+        }
+        ul#filter-types {
+            margin: 0%;
+            padding: 0%;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        ul#filter-types li {
+            margin-top: 25%;
+            font-size: 20px;
         }
         .right-side {
             background-color: gray;
@@ -223,7 +235,13 @@
             </div>
             <div class="catalog">
                 <div class="left-side">
-
+                    <ul id="filter-types">
+                        <li>Type</li>
+                        <li>Level</li>
+                        <li>Genre</li>
+                        <li>Author</li>
+                        <li>Year Published</li>
+                    </ul>
                 </div>
 
                 <div class="right-side">
@@ -233,15 +251,9 @@
 
                     <div class="rightbox-filters">
                         <ul id="filter-path">
-                            <li>
-                                filter
-                            </li>
-                            <li>
-                                filter
-                            </li>
-                            <li>
-                                filter
-                            </li>
+                            <li>filter</li>
+                            <li>filter</li>
+                            <li>filter</li>
                         </ul>
                     </div>
 
