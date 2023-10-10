@@ -112,30 +112,52 @@
             text-decoration: underline;
         }
         .catalog {
-            margin: .25%;
             display: flex;
             height: 100%;
+            margin-left: .25%;
+            margin-right: .25%;
         }
         .left-side {
-            background-color: maroon;
+            background-color: teal;
             height: 100%;
-            width: 30%;
+            width: 20%;
         }
         .right-side {
-            background-color: aqua;
+            background-color: gray;
             height: 100%;
-            width: 100%;
+            width: 80%;
         }
         .rightbox-top {
-            flex: 0 0 auto;
-            justify-content: left;
-            align-items: left;
-            padding-left: 3%;
-            padding-right: 3%;
-            
+            padding-left: 1%;
+            background-color: burlywood;
+            height: 5%;
+            display: flex;
+            align-items: center;
         }
-        h3#motto {
-            font-weight: normal;
+        .rightbox-filters {
+            padding-left: 1%;
+            background-color: skyblue;
+            display: flex;
+            align-items: center;
+            height: 5%;
+        }
+        ul#filter-path {
+            margin: 0%;
+            padding: 0%;
+            list-style: none;
+        }
+        ul#filter-path li {
+            display: inline;
+            font-style: italic;
+        }
+        ul#filter-path li::after {
+            font-style: normal;
+            content: "X\00a0";
+        }
+        .rightbox-middle {
+            padding-left: 1%;
+            background-color: beige;
+            height: 90%;
         }
         img {
             width: 100%;
@@ -206,23 +228,24 @@
 
                 <div class="right-side">
                     <div class="rightbox-top">
-                        <h2>Search Catalog</h2>
-                        <p>
-                            <h3 id="motto">placeholder textplaceholder text<br><br>
-                                placeholder textplaceholder textplaceholder textplaceholder textplaceholder text
-                                placeholder textplaceholder textplaceholder textplaceholder textplaceholder text.<br><br>
-                                placeholder textplaceholder textplaceholder textplaceholder textplaceholder textplaceholder text
-                                placeholder textplaceholder textplaceholder textplaceholder textplaceholder textplaceholder text
-                                placeholder textplaceholder textplaceholder textplaceholder textplaceholder textplaceholder text
-                                placeholder textplaceholder textplaceholder text
-                            </h3>
-                        </p>
+                        Page 1 of 999
+                    </div>
+
+                    <div class="rightbox-filters">
+                        <ul id="filter-path">
+                            <li>
+                                filter
+                            </li>
+                            <li>
+                                filter
+                            </li>
+                            <li>
+                                filter
+                            </li>
+                        </ul>
                     </div>
 
                     <div class="rightbox-middle">
-                    </div>
-
-                    <div class="rightbox-bottom">
                     </div>
 
                 </div>
