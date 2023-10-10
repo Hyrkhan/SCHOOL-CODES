@@ -82,10 +82,14 @@
             left: 0;
             width: 100%;
             height: 90%;
-            background-color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
         }
         .pathbox {  
-            height: 7%;
+            height: 5%;
+            align-items: center;
+            background-color: whitesmoke;
         }
         ul.breadcrumb {
             list-style: none;
@@ -107,40 +111,13 @@
             color: #b93939;
             text-decoration: underline;
         }
-        .contentbox-top {
-            height: 25%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        .contentbox-middle {
-            height: 75%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        h2#content-text {
-            color: maroon;
-        }
-        .contentbox-middle-searchcatalog {
-            height: 100%;
-            flex-grow: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column; 
-            margin-bottom: 10%;
-        }
-        .contentbox-middle-searchcatalog form {
-            display: flex;
-            flex-direction: column;
+        .rightbox-top {
+            flex: 0 0 auto;
+            justify-content: left;
             align-items: left;
-        }
-        .contentbox-middle-searchcatalog form input[type="submit"] {
-            background-color: maroon;
-            color: white;
+            padding-left: 3%;
+            padding-right: 3%;
+            
         }
         h3#motto {
             font-weight: normal;
@@ -178,7 +155,7 @@
         <div class="header">
 
             <div class="toplogoimage">
-                <img src="UB-Master-Logo.png">
+                <img src="/UB_OPAC/images/UB-Master-Logo.png">
             </div>
 
             <div class="header-navigation">
@@ -188,9 +165,11 @@
                 </div>
 
                 <div class="header-navigation-buttons">
-                    <button class="button">
-                        <h2 id="navigation-button">Register</h2>
-                    </button>
+                    <a href="/UB_OPAC/Registration.html">
+                        <button class="button">
+                            <h2 id="navigation-button">Register</h2>
+                        </button>
+                    </a>
                 </div>
 
             </div>
@@ -201,36 +180,40 @@
 
             <div class="pathbox">
                 <ul class="breadcrumb">
-                    <li><a href="home.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li>Search Catalog</li>
                   </ul>
             </div>
+            <div class="container">
+                <div class="left-side">
 
-            <div class="contentbox-top">
-                <p>
-                    <h1>Welcome to UB Lipa Campus OPAC!</h1>
-                    <h3 id="motto">Discover a world of academic resources at your fingertips. 
-                    Start your search now!</h3>
-                </p>
-            </div>
-
-            <div class="contentbox-middle">
-                <h2 id="content-text">Search the Catalog:</h2>
-                <div class="contentbox-middle-searchcatalog">
-                    <form >
-                        <label for="title">Title:</label>
-                        <input type="text" id="title" name="title"><br>
-                        <label for="author">Author:</label>
-                        <input type="text" id="author" name="author"><br>
-                        <label for="subject">Subject:</label>
-                        <input type="text" id="subject" name="subject"><br>
-                        <label for="series-title">Series Title:</label>
-                        <input type="text" id="series-title" name="series-title"><br>
-                        <input type="submit" value="Submit">
-                    </form> 
                 </div>
+
+                <div class="right-side">
+                    <div class="rightbox-top">
+                        <h2>Search Catalog</h2>
+                        <p>
+                            <h3 id="motto">placeholder textplaceholder text<br><br>
+                                placeholder textplaceholder textplaceholder textplaceholder textplaceholder text
+                                placeholder textplaceholder textplaceholder textplaceholder textplaceholder text.<br><br>
+                                placeholder textplaceholder textplaceholder textplaceholder textplaceholder textplaceholder text
+                                placeholder textplaceholder textplaceholder textplaceholder textplaceholder textplaceholder text
+                                placeholder textplaceholder textplaceholder textplaceholder textplaceholder textplaceholder text
+                                placeholder textplaceholder textplaceholder text
+                            </h3>
+                        </p>
+                    </div>
+
+                    <div class="rightbox-middle">
+                    </div>
+
+                    <div class="rightbox-bottom">
+                    </div>
+
+                </div>
+
             </div>
-            
+
         </div>                                       
 
     </div>
