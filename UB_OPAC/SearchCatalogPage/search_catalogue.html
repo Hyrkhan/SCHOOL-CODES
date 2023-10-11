@@ -171,6 +171,28 @@
             background-color: beige;
             height: 85%;
         }
+        ul#resource {
+            margin: 0%;
+            padding: 0%;
+            list-style: none;
+            display: flex;
+        }
+        ul#resource li {
+            margin: 1%;
+            background-color: aqua;
+            height: 320px;
+            width: 230px;
+        }
+        .cover-photo {
+            background-color: whitesmoke;
+            margin: 15px;
+            height: 60%;
+        }
+        .resource-details {
+            background-color: antiquewhite;
+            margin: 15px;
+            height: 28%;
+        }
         .rightbox-bottom {
             padding-left: 1%;
             background-color: gray;
@@ -178,6 +200,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        p {
+            margin: 5px;
         }
         img {
             width: 100%;
@@ -265,6 +290,17 @@
                     </div>
 
                     <div class="rightbox-middle">
+                        <ul id="resource">
+                            <li>
+                                <div class="cover-photo"></div>
+                                <div class="resource-details">
+                                    <p id="title">Title: resource title</p>
+                                    <p id="type">Type: Textbook</p>
+                                    <p id="author">Author: firstname, lastname</p>
+                                    <p id="published-year">Published: 2000-00-00</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     
                     <div class="rightbox-bottom">
