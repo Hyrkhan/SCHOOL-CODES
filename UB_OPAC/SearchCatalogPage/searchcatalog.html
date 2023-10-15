@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+<title>University of Batangas Public Library</title>
+
+<head>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .toplinecolor {
+            background-color: maroon;
+            width: 100%;
+            height: 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .toplogoimage {
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: auto;
+            height: 8%;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding-right: 10%;
+            flex-grow: 1;
+        }
+
+        .header-navigation {
+            height: 8%;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding-right: 5%;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-navigation-buttons {
+            height: 100%;
+            top: 10px;
+            padding-left: 15%;
+        }
+
+        h2#navigation-button {
+            font-weight: 100;
+        }
+
+        .button {
+            background-color: maroon;
+            border: none;
+            color: white;
+            padding: 5px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 16px;
+        }
+
+        .button:hover {
+            background-color: #b93939;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 130%;
+            background-color: white;
+            position: relative;
+        }
+
+        .contentbox {
+            position: absolute;
+            top: 10%;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: red;
+            height: 90%;
+            
+            @media (max-width: 750px) {
+                height: auto; 
+            }
+        }
+
+        .pathbox {
+            height: 5%;
+            align-items: center;
+            background-color: whitesmoke;
+        }
+
+        ul.breadcrumb {
+            list-style: none;
+        }
+
+        ul.breadcrumb li {
+            display: inline;
+            font-size: 18px;
+        }
+
+        ul.breadcrumb li+li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
+
+        ul.breadcrumb li a {
+            color: maroon;
+            text-decoration: none;
+        }
+
+        ul.breadcrumb li a:hover {
+            color: #b93939;
+            text-decoration: underline;
+        }
+
+        .catalog {
+            display: flex;
+            height: 100%;
+            margin-left: .25%;
+            margin-right: .25%;
+        }
+
+        .left-side {
+            background-color: darkgrey;
+            height: 100%;
+            width: 250px;
+            @media (max-width: 750px) {
+                height: auto; 
+            }
+        }
+
+        ul#filter-types {
+            margin: 0%;
+            padding: 0%;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        ul#filter-types li {
+            margin-top: 25%;
+            font-size: 20px;
+        }
+
+        .right-side {
+            background-color: gray;
+            height: 100%;
+            width: 100%;
+        }
+
+        .rightbox-top {
+            padding-left: 1%;
+            background-color: burlywood;
+            height: 5%;
+            display: flex;
+            align-items: center;
+        }
+
+        .rightbox-filters {
+            padding-left: 1%;
+            background-color: skyblue;
+            display: flex;
+            align-items: center;
+            height: 5%;
+        }
+
+        ul#filter-path {
+            margin: 0%;
+            padding: 0%;
+            list-style: none;
+        }
+
+        ul#filter-path li {
+            display: inline;
+            font-style: italic;
+        }
+
+        ul#filter-path li::after {
+            font-style: normal;
+            content: "/\00a0";
+        }
+
+        .rightbox-middle {
+            padding-left: 1%;
+            background-color: beige;
+            height: 85%;
+        }
+
+        ul#resource {
+            margin: 0%;
+            padding: 0%;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        ul#resource li {
+            margin: 1%;
+            background-color: gray;
+            height: 320px;
+            width: 230px;
+            border-radius: 10px;
+        }
+
+        .cover-photo {
+            background-color: rgb(221, 201, 201);
+            margin: 15px;
+            height: 60%;
+        }
+
+        .resource-details {
+            background-color: antiquewhite;
+            margin: 15px;
+            height: 28%;
+        }
+
+        .rightbox-bottom {
+            padding-left: 1%;
+            background-color: wheat;
+            height: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p {
+            margin: 5px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .footer {
+            height: 10%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-text {
+            text-align: center;
+            padding-right: 5%;
+            flex-grow: 1;
+        }
+
+        /* Custom dropdown styles */
+        .dropdown-container {
+            position: relative;
+            display: inline-block;
+            width: 80%;
+        }
+
+        .dropdown-button {
+            cursor: pointer;
+            background-color: maroon;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .dropdown-button:hover,
+        .dropdown-button:focus {
+            background-color: #b93939;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #f6f6f6;
+            min-width: 230px;
+            overflow: auto;
+            border: 1px solid #ddd;
+            z-index: 1;
+        }
+
+        .dropdown-item {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-item:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown-show {
+            display: block;
+        }
+        .radio-item {
+            display: flex;
+            align-items: center;
+        }
+        .selected-filters {
+            padding-left: 1%;
+            background-color: skyblue;
+            display: flex;
+            align-items: center;
+            height: 5%;
+        }
+
+        .selected-filter {
+            margin: 0 5px;
+            padding: 5px 10px;
+            background-color: #b93939;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="toplinecolor"></div>
+    <div class="container">
+        <div class="header">
+            <div class="toplogoimage">
+                <img src="/UB_OPAC/images/UB-Master-Logo.png">
+            </div>
+            <div class="header-navigation">
+                <div class="header-navigation-buttons">
+                    <h2 id="navigation-button">Login</h2>
+                </div>
+                <div class="header-navigation-buttons">
+                    <a href="/UB_OPAC/Registration.html">
+                        <button class="button">
+                            <h2 id="navigation-button">Register</h2>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="contentbox">
+            <div class="pathbox">
+                <ul class="breadcrumb">
+                    <li><a href="../index.html">Home</a></li>
+                    <li>Search Catalog</li>
+                </ul>
+            </div>
+            <div class="catalog">
+                <div class="left-side">
+                    <ul id="filter-types">
+                        <li class="dropdown-container">
+                            <div class="dropdown-button" onclick="toggleDropdown('type-dropdown')">Type <span>&#x25BC;</span></div>
+                            <div id="type-dropdown" class="dropdown-menu">
+                                <label class="dropdown-item">
+                                    Religious<input type="radio" name="type-filter" value="Religious">
+                                </label>
+                                <label class="dropdown-item">
+                                    Textbooks<input type="radio" name="type-filter" value="Textbooks">
+                                </label>
+                                <label class="dropdown-item">
+                                    Theses<input type="radio" name="type-filter" value="Theses">
+                                </label>
+                                <label class="dropdown-item">
+                                    Journals<input type="radio" name="type-filter" value="Journals">
+                                </label>
+                            </div>
+                        </li>
+                        <li class="dropdown-container">
+                            <div class="dropdown-button" onclick="toggleDropdown('level-dropdown')">Level <span>&#x25BC;</span></div>
+                            <div id="level-dropdown" class="dropdown-menu">
+                                <label class="dropdown-item">
+                                    Junior Highschool<input type="radio" name="level-filter" value="Junior Highschool">
+                                </label>
+                                <label class="dropdown-item">
+                                    Senior Highschool<input type="radio" name="level-filter" value="Senior Highschool">
+                                </label>
+                                <label class="dropdown-item">
+                                    College<input type="radio" name="level-filter" value="College">
+                                </label>
+                            </div>
+                        </li>
+                        <li class="dropdown-container">
+                            <div class="dropdown-button" onclick="toggleDropdown('genre-dropdown')">Genre <span>&#x25BC;</span></div>
+                            <div id="genre-dropdown" class="dropdown-menu">
+                                <label class="dropdown-item">
+                                    Maths<input type="radio" name="genre-filter" value="Maths">
+                                </label>
+                                <label class="dropdown-item">
+                                    Engineering<input type="radio" name="genre-filter" value="Engineering">
+                                </label>
+                                <label class="dropdown-item">
+                                    Computer Programming<input type="radio" name="genre-filter" value="Computer Programming">
+                                </label>
+                                <label class="dropdown-item">
+                                    Finance & Accounting<input type="radio" name="genre-filter" value="Finance & Accounting">
+                                </label>
+                                <label class="dropdown-item">
+                                    Hospitality<input type="radio" name="genre-filter" value="Hospitality">
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right-side">
+                    <div class="rightbox-top">
+                        Page 1 of 999
+                        <button id="reset-filters-button" onclick="resetFilters()">Reset Filters</button>
+
+                    </div>
+                    <div class="rightbox-filters">
+                        <ul id="filter-path">
+                            
+                        </ul>
+                    </div>
+                    <div class="rightbox-middle">
+                        <ul id="resource">
+                            <li>
+                                <div class="cover-photo"></div>
+                                <div class="resource-details">
+                                    <p id="title">Title: resource title</p>
+                                    <p id="type">Type: Textbook</p>
+                                    <p id="author">Author: firstname, lastname</p>
+                                    <p id="published-year">Published: 31-12-2000</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cover-photo"></div>
+                                <div class="resource-details">
+                                    <p id="title">Title: resource title</p>
+                                    <p id="type">Type: Textbook</p>
+                                    <p id="author">Author: firstname, lastname</p>
+                                    <p id="published-year">Published: 31-12-2000</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cover-photo"></div>
+                                <div class="resource-details">
+                                    <p id="title">Title: resource title</p>
+                                    <p id="type">Type: Textbook</p>
+                                    <p id="author">Author: firstname, lastname</p>
+                                    <p id="published-year">Published: 31-12-2000</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cover-photo"></div>
+                                <div class="resource-details">
+                                    <p id="title">Title: resource title</p>
+                                    <p id="type">Type: Textbook</p>
+                                    <p id="author">Author: firstname, lastname</p>
+                                    <p id="published-year">Published: 31-12-2000</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rightbox-bottom">
+                        Page 1 of 999
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-text">
+            Search Catalog
+        </div>
+        <div class="footer-text">
+            Library Information
+        </div>
+        <div class="footer-text">
+            Contacts Us
+        </div>
+        <div class="footer-text">
+            Private Policy
+        </div>
+    </div>
+    <script>
+        // Create an object to store the selected filter for each container
+        const selectedFilters = {
+            'type': null,
+            'level': null,
+            'genre': null
+        };
+    
+        // Keep track of the currently open dropdown
+        let openDropdown = null;
+    
+        function toggleDropdown(id) {
+            const dropdown = document.getElementById(id);
+    
+            if (dropdown.style.display === 'block') {
+                closeDropdown();
+            } else {
+                closeDropdown();
+                dropdown.style.display = 'block';
+                openDropdown = dropdown;
+            }
+        }
+    
+        // Function to close the currently open dropdown
+        function closeDropdown() {
+            if (openDropdown) {
+                openDropdown.style.display = 'none';
+                openDropdown = null;
+            }
+        }
+    
+        function handleFilterSelection(event, filterType) {
+            const selectedFilter = event.target.value;
+    
+            // Replace the previously selected filter for this container
+            selectedFilters[filterType] = selectedFilter;
+    
+            // Update the selected filter display
+            updateSelectedFilterPath();
+        }
+    
+        function updateSelectedFilterPath() {
+            const filterPath = document.getElementById('filter-path');
+            filterPath.innerHTML = ''; // Clear the filter path
+    
+            for (const filterType in selectedFilters) {
+                if (selectedFilters[filterType]) {
+                    const li = document.createElement('li');
+                    li.textContent = selectedFilters[filterType];
+                    filterPath.appendChild(li);
+                }
+            }
+        }
+    
+        // Add event listeners for filter radio buttons
+        const filterTypes = ['type', 'level', 'genre'];
+        filterTypes.forEach((filterType) => {
+            const filterRadios = document.querySelectorAll(`input[name="${filterType}-filter"]`);
+            filterRadios.forEach((radio) => {
+                radio.addEventListener('change', (event) => {
+                    handleFilterSelection(event, filterType);
+                });
+            });
+        });
+    
+        function resetFilters() {
+            // Clear the selected filters
+            for (const filterType in selectedFilters) {
+                selectedFilters[filterType] = null;
+            }
+    
+            // Clear the filter path
+            updateSelectedFilterPath();
+    
+            // Close the currently open dropdown
+            closeDropdown();
+        }
+    </script>
+</body>
+</html>
