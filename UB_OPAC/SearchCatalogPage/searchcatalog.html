@@ -266,7 +266,6 @@
             flex-grow: 1;
         }
 
-        /* Custom dropdown styles */
         .dropdown-container {
             position: relative;
             display: inline-block;
@@ -418,6 +417,16 @@
                                 </label>
                             </div>
                         </li>
+                        <li class="dropdown-container">
+                            <div class="input-filter-type">
+                                <input type="text" id="author-search" placeholder="Search Author" oninput="handleAuthorSearch()">
+                            </div>
+                        </li>
+                        <li class="dropdown-container">
+                            <div class="input-filter-type">
+                                <input type="text" id="published-year" placeholder="Published-Year" oninput="handlePublishedYearSearch()">
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div class="right-side">
@@ -493,19 +502,18 @@
         </div>
     </div>
     <script>
-        // Create an object to store the selected filter for each container
+        // Gotta learn more about this script
         const selectedFilters = {
             'type': null,
             'level': null,
-            'genre': null
+            'genre': null,
+            'author': null
         };
     
-        // Keep track of the currently open dropdown
         let openDropdown = null;
     
         function toggleDropdown(id) {
             const dropdown = document.getElementById(id);
-    
             if (dropdown.style.display === 'block') {
                 closeDropdown();
             } else {
@@ -515,7 +523,6 @@
             }
         }
     
-        // Function to close the currently open dropdown
         function closeDropdown() {
             if (openDropdown) {
                 openDropdown.style.display = 'none';
@@ -525,17 +532,38 @@
     
         function handleFilterSelection(event, filterType) {
             const selectedFilter = event.target.value;
-    
-            // Replace the previously selected filter for this container
             selectedFilters[filterType] = selectedFilter;
+            updateSelectedFilterPath();
+        }
     
-            // Update the selected filter display
+        function handleAuthorSearch() {
+            const authorSearchInput = document.getElementById('author-search');
+            const authorName = authorSearchInput.value.trim();
+            if (authorName) {
+                selectedFilters['author'] = authorName;
+            } 
+            else {
+                selectedFilters['author'] = null;
+            }
+            updateSelectedFilterPath();
+        }
+
+        function handlePublishedYearSearch() {
+            const authorSearchInput = document.getElementById('published-year');
+            const authorName = authorSearchInput.value.trim();
+    
+            if (authorName) {
+                selectedFilters['publishedyear'] = authorName;
+            } 
+            else {
+                selectedFilters['publishedyear'] = null;
+            }
             updateSelectedFilterPath();
         }
     
         function updateSelectedFilterPath() {
             const filterPath = document.getElementById('filter-path');
-            filterPath.innerHTML = ''; // Clear the filter path
+            filterPath.innerHTML = '';
     
             for (const filterType in selectedFilters) {
                 if (selectedFilters[filterType]) {
@@ -546,7 +574,6 @@
             }
         }
     
-        // Add event listeners for filter radio buttons
         const filterTypes = ['type', 'level', 'genre'];
         filterTypes.forEach((filterType) => {
             const filterRadios = document.querySelectorAll(`input[name="${filterType}-filter"]`);
@@ -556,19 +583,15 @@
                 });
             });
         });
-    
+        
         function resetFilters() {
-            // Clear the selected filters
             for (const filterType in selectedFilters) {
                 selectedFilters[filterType] = null;
             }
-    
-            // Clear the filter path
             updateSelectedFilterPath();
-    
-            // Close the currently open dropdown
             closeDropdown();
         }
     </script>
+    
 </body>
 </html>
